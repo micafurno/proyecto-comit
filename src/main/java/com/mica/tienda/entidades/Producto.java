@@ -20,3 +20,4 @@ public class Producto implements Serializable{
 	private int precioUnitario;
 	private int stock;
 }
+
