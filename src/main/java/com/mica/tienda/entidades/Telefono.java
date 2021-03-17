@@ -18,6 +18,5 @@ public class Telefono implements Serializable {
 	
 	private Integer codArea;
 	private Integer numero;
-	private Boolean isCelular = false;
 	
 }

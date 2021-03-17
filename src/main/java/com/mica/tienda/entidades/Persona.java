@@ -12,18 +12,17 @@ import javax.persistence.Table;
 import javassist.SerialVersionUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(setterPrefix = "set")
-@ToString
+@Data
 @Entity
 @Table(name = "personas")
 public class Persona implements Serializable {
