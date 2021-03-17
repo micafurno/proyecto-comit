@@ -3,7 +3,10 @@ package com.mica.tienda.entidades;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,11 +20,13 @@ import lombok.ToString;
 @ToString
 @Data
 @Entity
+@Table (name = "Productos")
 public class Producto implements Serializable{
 	private static final Long SerialVersionUID = 1L;
 
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String codigo;
@@ -38,6 +43,12 @@ public class Producto implements Serializable{
 			return("AGOTADO");
 		}
 	
+	}
+	
+	public void mostrarProducto() {
+	System.out.println("Codigo: "+codigo);
+	System.out.println("Producto: "+nombreProducto);
+	System.out.println("Precio: $"+precioUnitario);
 	}
 }
 
