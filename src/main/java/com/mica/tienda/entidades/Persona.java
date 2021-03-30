@@ -16,7 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Persona implements Serializable {
+public abstract class Persona implements Serializable {
 	private static final Long SerialVersionUID = 1L;
 
 	@Id
